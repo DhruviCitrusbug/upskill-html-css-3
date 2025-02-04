@@ -1,0 +1,74 @@
+/* CSS RESET */
+:root {
+    /* Colors */
+    --White: #ffffff;
+    --Background-Color: #F7F7FC;
+    --Divider-Color: #EBEBF5;
+    --Text-Color: #1A1A33;
+
+    /* Variables */
+
+}
+
+* {
+    font-size: 10px !important;
+    font-family: "Inter" !important;
+}
+
+p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#parent-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+#icon-sidebar {
+    background-color: var(--Background-Color);
+    width: 6.4rem;
+}
+
+#detail-sidebar {
+    width: 28rem;
+}
+
+#main-container {
+    background-color: var(--Background-Color);
+    width: -webkit-fill-available;
+}
+
+#navbar {
+    height: 6.4rem;
+    padding: 1.6rem 4rem;
+    gap: 2.4rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#navbar .navbar-item-icon {
+    width: 2rem;
+}
+
+#navbar .navbar-item {
+    gap: 0.8rem;
+    align-items: center;
+}
+
+#navbar .avatar-image {
+    width: 3.2rem;
+    height: auto;
+}
+
+#navbar p {
+    font-size: 1.4rem !important;
+    font-weight: 500;
+    line-height: 2.4rem;
+}
+
+hr .navbar-divider {
+    border: 1px solid var(--Divider-Color);
+    opacity: 1;
+    margin: 0;
+}
