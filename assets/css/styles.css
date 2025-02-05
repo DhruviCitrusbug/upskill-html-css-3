@@ -21,13 +21,17 @@ p {
     padding: 0 !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 #parent-container {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    background-color: var(--Background-Color);
 }
 
 #icon-sidebar {
-    background-color: var(--Background-Color);
     width: 6.4rem;
 }
 
@@ -43,9 +47,10 @@ p {
 
 #detail-sidebar {
     width: 28rem;
+    background-color: var(--White);
 }
 
-#detail-sidebar .detail-sidebar-navbar {
+#detail-sidebar .detail-sidebar-navbar-header {
     font-size: 1.8rem !important;
     font-weight: 600;
     line-height: 2.8rem;
@@ -53,7 +58,6 @@ p {
 }
 
 #main-container {
-    background-color: var(--Background-Color);
     width: -webkit-fill-available;
 }
 
@@ -83,6 +87,18 @@ p {
     font-size: 1.4rem !important;
     font-weight: 500;
     line-height: 2.4rem;
+}
+
+#navbar .dropdown-item-icon {
+    width: 1.6rem;
+}
+
+#navbar .dropdown-menu {
+    width: 100%;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
 }
 
 hr .navbar-divider {

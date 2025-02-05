@@ -21,8 +21,11 @@
             <hr class="navbar-divider m-0">
         </div>
         <div id="detail-sidebar">
-            <div class="detail-sidebar-navbar">
-                Radical Focus
+            <div class="detail-sidebar-navbar d-flex align-items-center justify-content-between">
+                <div class="detail-sidebar-navbar-header">
+                    Radical Focus
+                </div>
+                <span><a href=""><img src="assets/images/hide_icon.svg"></a></span>
             </div>
             <hr class="navbar-divider m-0">
         </div>
@@ -34,10 +37,28 @@
                 <div class="navbar-item-icon" type="button">
                     <img src="assets/images/notification.svg" alt="notification">
                 </div>
-                <div class="d-flex navbar-item" type="button">
-                    <span><img src="assets/images/avatar.png" class="avatar-image" alt="avatar"></span>
-                    <p>Matilda Stone</p>
-                    <span><img src="assets/images/dropdown.svg" alt="dropdown"></span>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="d-flex navbar-item" type="button">
+                            <span><img src="assets/images/avatar.png" class="avatar-image" alt="avatar"></span>
+                            <p>Matilda Stone</p>
+                            <span><img src="assets/images/dropdown.svg" alt="dropdown"></span>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li>
+                            <a href="#" class="d-flex justify-content-evenly align-items-center mt-2 mb-2">
+                                <span class="dropdown-item-icon"><img src="assets/images/send.svg" alt="avatar"></span>
+                                <p>Settings</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex justify-content-evenly align-items-center mt-2 mb-2">
+                                <span class="dropdown-item-icon"><img src="assets/images/send.svg" alt="avatar"></span>
+                                <p>Log Out</p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <hr class="navbar-divider m-0">
