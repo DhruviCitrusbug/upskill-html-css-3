@@ -5,6 +5,10 @@
     --Background-Color: #F7F7FC;
     --Divider-Color: #EBEBF5;
     --Text-Color: #1A1A33;
+    --Text-Color-Gray: #ABABC2;
+    --Text-Color-Blue: #3030D3;
+    --Text-Color-Dark-Gray: #585874;
+    --Button-BG-Color: #EBEBFE;
 
     /* Variables */
 
@@ -45,9 +49,81 @@ a {
     height: auto;
 }
 
+#icon-sidebar .icon-sidebar-collapse {
+    display: none;
+    position: absolute;
+    left: 6.4rem;
+    transform: rotate(180deg);
+}
+
+#icon-sidebar .icon-sidebar-collapse img {
+    width: 1.6rem;
+    height: auto;
+}
+
+#icon-sidebar.show-sidebar .icon-sidebar-collapse{
+    display: block;
+}
+
+#icon-sidebar-wrapper {
+    padding-top: 2.9rem;
+}
+
+#icon-sidebar .icon-sidebar-item {
+    padding: 1.9rem;
+    position: relative;
+    width: 100%;
+}
+
+#icon-sidebar .icon-sidebar-item:hover {
+    background-color: var(--White);
+    border-top-left-radius: 2.4rem;
+    border-bottom-left-radius: 2.4rem;
+}
+
+#icon-sidebar .icon-sidebar-item:hover::before {
+    content: url("../images/top_corner.svg");
+    position: absolute;
+    top: -1.2rem;
+    right: 0rem;
+}
+
+#icon-sidebar .icon-sidebar-item:hover::after {
+    content: url("../images/bottom_corner.svg");
+    position: absolute;
+    top: 7rem;
+    right: 0rem;
+}
+
+#icon-sidebar .icon-sidebar-item.selected {
+    background-color: var(--White);
+    border-top-left-radius: 2.4rem;
+    border-bottom-left-radius: 2.4rem;
+}
+
+#icon-sidebar .icon-sidebar-item.selected::before {
+    content: url("../images/top_corner.svg");
+    position: absolute;
+    top: -1.2rem;
+    right: 0rem;
+}
+
+#icon-sidebar .icon-sidebar-item.selected::after {
+    content: url("../images/bottom_corner.svg");
+    position: absolute;
+    top: 7rem;
+    right: 0rem;
+}
+
 #detail-sidebar {
     width: 28rem;
     background-color: var(--White);
+    overflow-x: hidden;
+}
+
+#detail-sidebar.hide-sidebar {
+    width: 0rem !important;
+    transform: translateX(-100%);
 }
 
 #detail-sidebar .detail-sidebar-navbar-header {
@@ -55,6 +131,92 @@ a {
     font-weight: 600;
     line-height: 2.8rem;
     padding: 1.8rem 2.4rem;
+}
+
+#detail-sidebar-wrapper {
+    padding: 2.4rem;
+    gap: 1.6rem;
+}
+
+#detail-sidebar-wrapper .detail-sidebar-title {
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    color: var(--Text-Color-Gray) !important;
+}
+
+#detail-sidebar-wrapper .detail-sidebar-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 0rem;
+    font-weight: 500;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    color: var(--Text-Color-Dark-Gray) !important;
+}
+
+#detail-sidebar-wrapper .detail-sidebar-header {
+    color: var(--Text-Color-Blue) !important;
+}
+
+#detail-sidebar-wrapper .detail-sidebar-item.more-info::after {
+    content: url("../images/arrow_bottom.svg");
+    width: auto;
+    height: 1.6rem;
+}
+
+#detail-sidebar-wrapper span {
+    width: 1.8rem;
+    height: auto;
+    display: contents;
+}
+
+#detail-sidebar-wrapper button{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 0.8rem;
+    background-color: var(--Button-BG-Color);
+    border: none;
+    font-weight: 600;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    color: var(--Text-Color-Blue) !important;
+}
+
+#detail-sidebar-info-wrapper {
+    padding-top: 2.4rem ;
+    padding-bottom: 3.2rem;
+    gap: 1.6rem;
+}
+
+#detail-sidebar-info-wrapper img {
+    align-self: center;
+    width: 16.2rem;
+    height: auto;
+}
+
+#detail-sidebar-info-wrapper .detail-sidebar-info {
+    gap: 0.8rem;
+    padding: 0rem 2.4rem;
+}
+
+#detail-sidebar-info-wrapper .detail-sidebar-info-title {
+    font-weight: 600;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    text-align: center;
+}
+
+#detail-sidebar-info-wrapper .detail-sidebar-info-description {
+    font-weight: 400;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    text-align: center;
 }
 
 #main-container {
@@ -89,9 +251,6 @@ a {
     line-height: 2.4rem;
 }
 
-#navbar .dropdown-item-icon {
-    width: 1.6rem;
-}
 
 #navbar .dropdown-menu {
     width: 100%;

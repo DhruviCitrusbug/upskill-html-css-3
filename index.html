@@ -10,24 +10,108 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="assets/js/script.js"></script>
 </head>
 <body>
     <div class="d-flex flex-grow-1" id="parent-container">
         <div id="icon-sidebar">
-            <div class="icon-sidebar-navbar">
-                <img src="assets/images/fp_logo.png" alt="logo">
+            <div class="d-flex align-items-center">
+                <div class="icon-sidebar-navbar">
+                    <img src="assets/images/fp_logo.png" alt="logo">
+                </div>
+                <div class="icon-sidebar-collapse"><span><a href="" id="show-sidebar"><img src="assets/images/show_icon.svg"></a></span></div>
             </div>
             <hr class="navbar-divider m-0">
+            <div id="icon-sidebar-wrapper">
+                <div class="d-flex flex-column align-items-center">
+                    <a href="">
+                        <div class="icon-sidebar-item selected">
+                            <img src="assets/images/icon1.svg" alt="icon1">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="icon-sidebar-item">
+                            <img src="assets/images/icon2.svg" alt="icon2">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="icon-sidebar-item">
+                            <img src="assets/images/icon3.svg" alt="icon3">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="icon-sidebar-item">
+                            <img src="assets/images/icon4.svg" alt="icon4">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="icon-sidebar-item">
+                            <img src="assets/images/icon5.svg" alt="icon5">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="icon-sidebar-item">
+                            <img src="assets/images/icon6.svg" alt="icon1">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="icon-sidebar-item">
+                            <img src="assets/images/icon7.svg" alt="icon7">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="icon-sidebar-item">
+                            <img src="assets/images/icon8.svg" alt="icon8">
+                        </div>     
+                    </a>                 
+                </div>
+            </div>
         </div>
-        <div id="detail-sidebar">
+        <div id="detail-sidebar" class="d-flex flex-column">
             <div class="detail-sidebar-navbar d-flex align-items-center justify-content-between">
                 <div class="detail-sidebar-navbar-header">
                     Radical Focus
                 </div>
-                <span><a href=""><img src="assets/images/hide_icon.svg"></a></span>
+                <span><a href="" id="hide-sidebar"><img src="assets/images/hide_icon.svg"></a></span>
             </div>
             <hr class="navbar-divider m-0">
+            <div class="d-flex flex-column flex-grow-1 justify-content-between">
+                <div id="detail-sidebar-wrapper" class="d-flex flex-column">
+                    <div class="detail-sidebar-title">
+                        Direct Reports
+                    </div>
+                    <div class="detail-sidebar-items">
+                        <div class="detail-sidebar-item detail-sidebar-header">
+                            My Radical Focus
+                        </div>
+                        <div class="detail-sidebar-item more-info">
+                            Jennifer Mayer CSO
+                        </div>
+                        <div class="detail-sidebar-item">
+                            John Hancock CPO
+                        </div>
+                        <div class="detail-sidebar-item more-info">
+                            Johny Cash CFO
+                        </div>
+                        <div class="detail-sidebar-item more-info">
+                            Manfred Muller COO
+                        </div>
+                    </div>
+                    <button type="button"><span><img src="assets/images/plus.svg"></span>Add Direct Report</button>
+                </div>
+                <div id="detail-sidebar-info-wrapper" class="d-flex flex-column">
+                    <img src="assets/images/illustration.png" alt="illustration">
+                    <div class="detail-sidebar-info">
+                        <div class="d-flex flex-column detail-sidebar-info-title">
+                            Apply Radical Focus
+                        </div>
+                        <div class="detail-sidebar-info-description">
+                            Track objectives, define priorities and update KPIs & initiatives
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="main-container">
             <div id="navbar" class="d-flex">
@@ -47,15 +131,11 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <li>
-                            <a href="#" class="d-flex justify-content-evenly align-items-center mt-2 mb-2">
-                                <span class="dropdown-item-icon"><img src="assets/images/send.svg" alt="avatar"></span>
-                                <p>Settings</p>
+                            <a href="#" class="d-flex justify-content-evenly">                                <p>Settings</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="d-flex justify-content-evenly align-items-center mt-2 mb-2">
-                                <span class="dropdown-item-icon"><img src="assets/images/send.svg" alt="avatar"></span>
-                                <p>Log Out</p>
+                            <a href="#" class="d-flex justify-content-evenly">                                <p>Log Out</p>
                             </a>
                         </li>
                     </ul>
