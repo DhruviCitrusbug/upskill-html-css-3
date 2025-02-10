@@ -16,13 +16,14 @@
 <body>
     <div class="d-flex flex-grow-1" id="parent-container">
         <div id="icon-sidebar">
-            <div class="d-flex align-items-center">
-                <div class="icon-sidebar-navbar">
-                    <img src="assets/images/fp_logo.png" alt="logo">
-                </div>
+            <div id="icon-sidebar-navbar" class="d-flex align-items-center">
+                <a href="#">
+                    <div class="icon-sidebar-navbar">
+                        <img src="assets/images/fp_logo.png" alt="logo">
+                    </div>
+                </a>
                 <div class="icon-sidebar-collapse"><span><a href="" id="show-sidebar"><img src="assets/images/show_icon.svg"></a></span></div>
             </div>
-            <hr class="navbar-divider m-0">
             <div id="icon-sidebar-wrapper">
                 <div class="d-flex flex-column align-items-center">
                     <a href="">
@@ -75,8 +76,7 @@
                 </div>
                 <span><a href="" id="hide-sidebar"><img src="assets/images/hide_icon.svg"></a></span>
             </div>
-            <hr class="navbar-divider m-0">
-            <div class="d-flex flex-column flex-grow-1 justify-content-between">
+            <div class="d-flex flex-column flex-grow-1 justify-content-between overflow-auto">
                 <div id="detail-sidebar-wrapper" class="d-flex flex-column">
                     <div class="detail-sidebar-title">
                         Direct Reports
@@ -85,17 +85,47 @@
                         <div class="detail-sidebar-item detail-sidebar-header">
                             My Radical Focus
                         </div>
-                        <div class="detail-sidebar-item more-info">
+                        <div class="detail-sidebar-menu d-flex flex-column">
+                            <div class="detail-sidebar-item" type="button">
                             Jennifer Mayer CSO
+                            <span><img src="assets/images/arrow_bottom.svg"></span>
+                            </div>
+                            <div class="detail-sidebar-sub-items">
+                                <li type="button">
+                                    Jennifer Mayer CSO
+                                </li>
+                                <li type="button">
+                                    Jennifer Mayer CSO
+                                </li>
+                            </div>
                         </div>
-                        <div class="detail-sidebar-item">
+                        <div class="detail-sidebar-item" type="button">
                             John Hancock CPO
                         </div>
-                        <div class="detail-sidebar-item more-info">
+                        <div class="detail-sidebar-menu d-flex flex-column">
+                            <div class="detail-sidebar-item" type="button">
                             Johny Cash CFO
+                            <span><img src="assets/images/arrow_bottom.svg"></span>
+                            </div>
+                            <div class="detail-sidebar-sub-items">
+                                <li type="button">
+                                    Johny Cash CFO
+                                </li>
+                            </div>
                         </div>
-                        <div class="detail-sidebar-item more-info">
+                        <div class="detail-sidebar-menu d-flex flex-column">
+                            <div class="detail-sidebar-item" type="button">
                             Manfred Muller COO
+                            <span><img src="assets/images/arrow_bottom.svg"></span>
+                            </div>
+                            <div class="detail-sidebar-sub-items">
+                                <li type="button">
+                                    Manfred Muller COO
+                                </li>
+                                <li type="button">
+                                    Manfred Muller COO
+                                </li>
+                            </div>
                         </div>
                     </div>
                     <button type="button"><span><img src="assets/images/plus.svg"></span>Add Direct Report</button>
@@ -131,17 +161,16 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <li>
-                            <a href="#" class="d-flex justify-content-evenly">                                <p>Settings</p>
+                            <a href="#"><p>Settings</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="d-flex justify-content-evenly">                                <p>Log Out</p>
+                            <a href="#"><p>Log Out</p>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <hr class="navbar-divider m-0">
         </div>
     </div>
 </body>
