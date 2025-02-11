@@ -4,7 +4,7 @@ $(document).ready(function () {
         let sidebar = $("#detail-sidebar");
         let iconSidebar = $("#icon-sidebar");
     
-        if ($(window).width() <= 766) {
+        if ($(window).width() <= 991) {
             sidebar.addClass("hide-sidebar");
             iconSidebar.addClass("show-sidebar");
         } else {
@@ -41,6 +41,13 @@ $(document).ready(function () {
         let subMenu = $(this).next(".detail-sidebar-sub-items");
         $(this).toggleClass("more-info");
         subMenu.toggleClass("more-info");
+    });
+
+    $(".main-content-navbar-item").click(function (e) {
+        e.preventDefault();
+        parentClass = $(".main-content-navbar")
+        $(parentClass).find(".active").removeClass("active");
+        $(this).addClass("active");
     });
 
 });
