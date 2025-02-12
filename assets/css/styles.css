@@ -29,9 +29,22 @@ a {
     text-decoration: none !important;
 }
 
+h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: 600 !important;
+    font-size: 1.6rem !important;
+    line-height: 2.4rem !important;  
+    color: var(--Text-Color) !important;
+}
+
 h1 {
     margin: 0 !important;
     padding: 0 !important;
+    font-weight: 600 !important;
+    font-size: 2.2rem !important;
+    line-height: 3.4rem !important;
+    color: var(--Text-Color) !important;
 }
 
 #parent-container {
@@ -320,19 +333,14 @@ hr .navbar-divider {
 
 
 #main-content-wrapper {
-    padding: 4rem;
+    padding: 4rem 4rem 0rem 4rem;
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - 6.4rem);
 }
 
 .main-content-header {
     padding-bottom: 0.8rem;
-}
-
-.main-content-header h1 {
-    font-weight: 600;
-    font-size: 2.2rem !important;
-    line-height: 3.4rem;
-    color: var(--Text-Color);
 }
 
 .main-content-header button {
@@ -345,6 +353,7 @@ hr .navbar-divider {
     color: var(--Text-Color-Blue) !important;
     background-color: var(--Button-BG-Color);
     border: none;
+    border-radius: 0.6rem;
 }
 
 .main-content-navbar {
@@ -363,6 +372,116 @@ hr .navbar-divider {
 .main-content-navbar-item.active {
     color: var(--Text-Color-Blue) !important;
     border-bottom: var(--Text-Color-Blue) solid 2px;
+}
+
+#objectives-container {
+    margin: 1.2rem 0rem;
+    flex: 1;
+    border-radius: 1.2rem;
+    background-color: var(--White);
+    padding: 0rem 2.4rem;
+}
+
+.objectives-header {
+    padding: 1.6rem 0rem;
+    border-bottom: var(--Divider-Color) solid 1px;
+}
+
+.objectives-filter {
+    gap: 2.4rem;
+}
+
+.objectives-filter button {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    padding: 0.3rem 0.8rem;
+    gap: 0.4rem;
+    border: none;
+    border-radius: 0.6rem;
+    color: var(--Text-Color-Blue) !important;
+    background-color: var(--Button-BG-Color);
+}
+
+.objectives-filter button:hover {
+    background-color: var(--Text-Color-Gray);
+}
+
+.objectives-filter img {
+    height: 1.4rem;
+    width: auto;
+}
+
+.filter-options {
+    gap: 0.4rem;
+}
+
+.filter-options p {
+    padding-right: 0.4rem !important;
+    font-weight: 500;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+}
+
+.filter-options button {
+    padding: 0.3rem 0.8rem;
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    border: none;
+    border-radius: 0.6rem;
+    background-color: var(--Button-BG-Color);
+    color: var(--Text-Color-Blue) !important;
+}
+
+.filter-options button[selected] {
+    color: var(--White) !important;
+    background-color: var(--Text-Color-Blue);
+}
+
+.filter-options button:hover {
+    color: var(--White) !important;
+    background-color: var(--Text-Color-Blue);
+}
+
+.objectives-table-header {
+    padding: 1.6rem 0rem;
+}
+
+.objectives-table-header-item {
+    padding: 0rem 1.6rem;
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    color: var(--Text-Color-Dark-Gray) !important;
+    border-right: var(--Divider-Color) solid 1px;
+}
+
+.objectives-table-header-item.one {
+    width: 16.41%;
+}
+
+.objectives-table-header-item.two {
+    width: 10.8%;
+}
+
+.objectives-table-header-item.three {
+    width: 10.8%;
+}
+
+.objectives-table-header-item.four {
+    width: 31.68%;
+}
+
+.objectives-table-header-item.five {
+    width: 12.46%;
+}
+
+.objectives-table-header-item.six {
+    width: 17.87%;
+    border: none;
 }
 
 @media (max-width: 991px) {
