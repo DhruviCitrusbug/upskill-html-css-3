@@ -9,6 +9,8 @@
     --Text-Color-Blue: #3030D3;
     --Text-Color-Dark-Gray: #585874;
     --Button-BG-Color: #EBEBFE;
+    --Company-BG-Color: #E6F2E6;
+    --Company-Text-Color: #089605;
 
     /* Variables */
 
@@ -446,43 +448,167 @@ hr .navbar-divider {
     background-color: var(--Text-Color-Blue);
 }
 
+.dropdown img{
+    width: 1.8rem;
+    height: auto;
+}
+
 .objectives-table-header {
-    padding: 1.6rem 0rem;
+    height: calc(100% - 5.7rem);
+    align-items: center;
 }
 
 .objectives-table-header-item {
-    padding: 0rem 1.6rem;
+    padding: 1.6rem;
     font-weight: 600;
     font-size: 1.2rem !important;
     line-height: 1.8rem;
-    color: var(--Text-Color-Dark-Gray) !important;
-    border-right: var(--Divider-Color) solid 1px;
+    color: var(--Text-Color-Gray) !important;
 }
 
-.objectives-table-header-item.one {
+.objectives-divider img {
+    width: 1px;
+    height: 14px;
+}
+
+.objectives-table-header-item.item-one {
     width: 16.41%;
 }
 
-.objectives-table-header-item.two {
+.objectives-table-header-item.item-two {
     width: 10.8%;
 }
 
-.objectives-table-header-item.three {
+.objectives-table-header-item.item-three {
     width: 10.8%;
 }
 
-.objectives-table-header-item.four {
+.objectives-table-header-item.item-four {
     width: 31.68%;
 }
 
-.objectives-table-header-item.five {
+.objectives-table-header-item.item-five {
     width: 12.46%;
 }
 
-.objectives-table-header-item.six {
+.objectives-table-header-item.item-six {
     width: 17.87%;
-    border: none;
 }
+
+.objectives-table-body-row {
+    background-color: var(--Background-Color);
+    border-radius: 0.8rem;
+}
+
+.objectives-table-body-item.item-one {
+    width: 16.41%;
+    padding: 1.2rem 1.6rem;
+}
+
+.objectives-table-body-item.item-one .objectives-type-item-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.objectives-table-body-item.item-one button {
+    border-radius: 0.8rem;
+    gap: 0.6rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-weight: 600;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+}
+
+.objectives-table-body-item.item-two {
+    width: 10.8%;
+    font-weight: 400;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    padding: 1.7rem 1.6rem;
+    color: var(--Text-Color-Dark-Gray) !important;
+}
+
+.objectives-table-body-item.item-three {
+    width: 10.8%;
+    padding: 1rem 1.2rem;
+}
+
+.objectives-table-body-item.item-three .table-avatar-image {
+    height: 2.6rem;
+    width: auto;
+}
+
+.objectives-table-body-item.item-three button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 1.6rem;
+    border: 1px solid var(--Button-BG-Color);
+    background-color: var(--White);
+    border-radius: 0.8rem;
+}
+
+.objectives-table-body-item.item-four {
+    width: 31.68%;
+    padding: 1.2rem;
+}
+
+.objectives-table-body-item.item-four .objectives-description-wrapper {
+    border: 1px solid var(--Button-BG-Color);
+    background-color: var(--White);
+    border-radius: 0.8rem;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    color: var(--Text-Color-Dark-Gray) !important;
+}
+
+.objectives-table-body-item.item-five {
+    width: 12.46%;
+    padding: 1.2rem;
+}
+
+.objectives-table-body-item.item-five .objectives-due-date-wrapper {
+    border: 1px solid var(--Button-BG-Color);
+    background-color: var(--White);
+    border-radius: 0.8rem;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    color: var(--Text-Color-Dark-Gray) !important;
+}
+
+.objectives-table-body-item.item-six {
+    width: 17.87%;
+    padding: 1.6rem;
+}
+
+.objectives-table-body-item.item-six .objectives-due-progress-wrapper {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.objectives-table-body .objectives-divider {
+    padding-top: 2.1rem;
+}
+
+.company button{
+    color: var(--Company-Text-Color) !important;
+    background-color: var(--Company-BG-Color);
+}
+
+/* input[type='range'] {
+    -webkit-appearance: none !important;
+    background:red;
+    height:1.2rem;
+    width: 7.4rem;
+} */
 
 @media (max-width: 991px) {
 
