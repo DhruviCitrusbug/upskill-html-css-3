@@ -408,7 +408,8 @@ hr .navbar-divider {
 }
 
 .objectives-filter button:hover {
-    background-color: var(--Text-Color-Gray);
+    background-color: var(--Text-Color-Blue);
+    color: var(--White) !important;
 }
 
 .objectives-filter img {
