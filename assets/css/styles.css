@@ -183,8 +183,7 @@ h1 {
 }
 
 #detail-sidebar-wrapper .detail-sidebar-item:hover {
-    background-color: var(--Background-Color);
-    border-radius: 0.8rem;
+    color: var(--Text-Color-Blue) !important;
 } 
 
 
@@ -197,7 +196,7 @@ h1 {
 }
 
 #detail-sidebar-wrapper .detail-sidebar-sub-items.more-info {
-    padding: 0.4rem 2.5rem;
+    padding: 0.4rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -209,8 +208,12 @@ h1 {
     line-height: 2.2rem;
     color: var(--Text-Color-Dark-Gray) !important;
     list-style: none;
-    padding: 0.2rem 0rem;
+    padding: 0.4rem 0rem;
     width: 100%;
+}
+
+.detail-sidebar-sub-items li:hover {
+    color: var(--Text-Color-Blue) !important;
 }
 
 #detail-sidebar-wrapper .detail-sidebar-header {
@@ -359,8 +362,8 @@ hr .navbar-divider {
 }
 
 .main-content-navbar {
-    padding: 0.8rem, 1.4rem;
     border-bottom: var(--Divider-Color) solid 1px;
+    margin-bottom: 1.4rem;
 }
 
 .main-content-navbar-item {
