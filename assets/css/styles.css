@@ -11,6 +11,10 @@
     --Button-BG-Color: #EBEBFE;
     --Company-BG-Color: #E6F2E6;
     --Company-Text-Color: #089605;
+    --Division-BG-Color: #F6E7D6;
+    --Division-Text-Color: #B26000;
+    --Progress-Red-Color: #D42145;
+    --Progress-Thumb-Shadow: #0000001A;
 
     /* Variables */
 
@@ -47,6 +51,11 @@ h1 {
     font-size: 2.2rem !important;
     line-height: 3.4rem !important;
     color: var(--Text-Color) !important;
+}
+
+.delete-image {
+    width: 1.8rem;
+    height: auto;
 }
 
 #parent-container {
@@ -278,6 +287,7 @@ h1 {
 
 #main-container {
     flex: 1;
+    overflow: hidden;
 }
 
 #navbar {
@@ -380,6 +390,8 @@ hr .navbar-divider {
 }
 
 #objectives-container {
+    display: flex;
+    flex-direction: column;
     margin: 1.2rem 0rem;
     flex: 1;
     border-radius: 1.2rem;
@@ -457,8 +469,11 @@ hr .navbar-divider {
     height: auto;
 }
 
+.objectives-table {
+    overflow-x: auto;
+}
+
 .objectives-table-header {
-    height: calc(100% - 5.7rem);
     align-items: center;
 }
 
@@ -477,26 +492,38 @@ hr .navbar-divider {
 
 .objectives-table-header-item.item-one {
     width: 16.41%;
+    min-width: 14.5rem;
 }
 
 .objectives-table-header-item.item-two {
     width: 10.8%;
+    min-width: 10rem;
 }
 
 .objectives-table-header-item.item-three {
     width: 10.8%;
+    min-width: 10/4rem;
 }
 
 .objectives-table-header-item.item-four {
     width: 31.68%;
+    min-width: 31rem;
 }
 
 .objectives-table-header-item.item-five {
     width: 12.46%;
+    min-width: 12rem;
 }
 
 .objectives-table-header-item.item-six {
     width: 17.87%;
+    min-width: 18rem;
+}
+
+.objectives-table-body {
+    gap: 0.4rem;
+    height: calc(100vh - 40rem);
+    overflow: auto;
 }
 
 .objectives-table-body-row {
@@ -506,6 +533,7 @@ hr .navbar-divider {
 
 .objectives-table-body-item.item-one {
     width: 16.41%;
+    min-width: 14.5rem;
     padding: 1.2rem 1.6rem;
 }
 
@@ -513,6 +541,10 @@ hr .navbar-divider {
     display: flex;
     align-items: center;
     gap: 0.4rem;
+}
+
+.objectives-type-item-wrapper.more-info span {
+    transform: rotate(180deg);
 }
 
 .objectives-table-body-item.item-one button {
@@ -527,6 +559,7 @@ hr .navbar-divider {
 
 .objectives-table-body-item.item-two {
     width: 10.8%;
+    min-width: 10rem;
     font-weight: 400;
     font-size: 1.4rem !important;
     line-height: 2.2rem;
@@ -536,6 +569,7 @@ hr .navbar-divider {
 
 .objectives-table-body-item.item-three {
     width: 10.8%;
+    min-width: 10.4rem;
     padding: 1rem 1.2rem;
 }
 
@@ -556,6 +590,7 @@ hr .navbar-divider {
 
 .objectives-table-body-item.item-four {
     width: 31.68%;
+    min-width: 31rem;
     padding: 1.2rem;
 }
 
@@ -573,6 +608,7 @@ hr .navbar-divider {
 
 .objectives-table-body-item.item-five {
     width: 12.46%;
+    min-width: 12rem;
     padding: 1.2rem;
 }
 
@@ -590,12 +626,14 @@ hr .navbar-divider {
 
 .objectives-table-body-item.item-six {
     width: 17.87%;
+    min-width: 18rem;
     padding: 1.6rem;
 }
 
 .objectives-table-body-item.item-six .objectives-due-progress-wrapper {
     display: flex;
     gap: 0.8rem;
+    align-items: center;
 }
 
 .objectives-table-body .objectives-divider {
@@ -607,12 +645,123 @@ hr .navbar-divider {
     background-color: var(--Company-BG-Color);
 }
 
-/* input[type='range'] {
-    -webkit-appearance: none !important;
-    background:red;
-    height:1.2rem;
-    width: 7.4rem;
-} */
+.division button{
+    color: var(--Division-Text-Color) !important;
+    background-color: var(--Division-BG-Color);
+}
+
+input[type='range'] {
+    appearance: none !important;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--Progress-Red-Color);
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; 
+    background: var(--White);
+    cursor: pointer;
+    box-shadow: 0px 2px 6px 0px var(--Progress-Thumb-Shadow);
+}
+
+.progress-number output {
+    font-weight: 400;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--Button-BG-Color);
+    background-color: var(--White);
+    border-radius: 0.6rem;
+}
+
+.objectives-due-progress-wrapper .percent {
+    font-weight: 500;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    color: var(--Text-Color-Dark-Gray);
+}
+
+.objectives-table-sub-detail {
+    display: none !important;
+}
+
+.objectives-table-sub-detail.more-info {
+    display: flex !important;
+}
+
+.objectives-table-sub-detail .text {
+    font-weight: 600;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    width: 40%;
+    padding: 1.7rem 1.6rem 1.7rem 4.2rem;
+}
+
+.objectives-table-sub-detail .list-items {
+    width: 70%;
+    padding: 1.2rem;
+    gap: 0.8rem;
+}
+
+.objectives-detail-divider {
+    width: 1px;
+    align-content: center;
+}
+
+.list-items .list-item-detail {
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+}
+
+.list-items li {
+    font-weight: 400;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    padding: 0.5rem 1rem;
+    color: var(--Text-Color-Dark-Gray) !important;
+    border: 1px solid var(--Divider-Color);
+    border-radius: 0.8rem;
+    flex: 1;
+}
+
+.list-items span {
+    padding: 0rem 1.6rem;
+}
+
+.list-items button {
+    background-color: var(--Button-BG-Color);
+    color: var(--Text-Color-Blue) !important;
+    border: none;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    width: 11.8rem;
+    height: 2.4rem;
+    margin-top: 1.2rem;
+}
+
+.list-items button:hover {
+    background-color: var(--Text-Color-Blue);
+    color: var(--White) !important;
+}
+
+.objectives-table-footer {
+    padding: 1.6rem 0rem 2.4rem 0rem;
+}
+
+.objectives-table-footer .show-more {
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 2.4rem;
+    color: var(--Text-Color-Blue) !important;
+}
 
 @media (max-width: 991px) {
 

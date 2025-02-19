@@ -7,7 +7,7 @@
     <title>Focus Power</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/Inter-Font-Family/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -233,7 +233,7 @@
                         <div class="objectives-table-body d-flex flex-column">
                             <div class="objectives-table-body-row d-flex">
                                 <div class="objectives-table-body-item item-one company">
-                                    <div class="objectives-type-item-wrapper">
+                                    <div class="objectives-type-item-wrapper" type="button">
                                         <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
                                         <button>Company</button>
                                     </div>
@@ -264,12 +264,176 @@
                                 <div class="objectives-divider"><img src="assets/images/divider.png"></div>
                                 <div class="objectives-table-body-item item-six">
                                     <div class="objectives-due-progress-wrapper">
-                                        <input type="range" min="1" max="100" value="25">
-                                        <div class="progress-number">25</div>
+                                        <input type="range" min="1" max="100" value="25" id="rangeInput1" oninput="amount1.value=rangeInput1.value">
+                                        <div class="progress-number">
+                                            <output
+                                            id="amount1"
+                                            name="amount1"
+                                            for="rangeInput"
+                                            class="percentage-input">25</output>
+                                        </div>
                                         <div class="percent">%</div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="objectives-table-sub-detail">
+                                <div class="text">
+                                    Objective is achieved when
+                                </div>
+                                <div class="objectives-detail-divider"><img src="assets/images/objectives_divider.svg"></div>
+                                <div class="list-items d-flex flex-column">
+                                    <div class="list-item-detail d-flex">
+                                        <li>We have companyX as client</li>
+                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                    </div>
+                                    <div class="list-item-detail d-flex">
+                                        <li>We have companyX as client</li>
+                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                    </div>
+                                    <div class="list-item-detail d-flex">
+                                        <li>We have companyX as client</li>
+                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                    </div>
+                                    <button>+ Add Condition</button>
+                                </div>
+                            </div>
+                            <div class="objectives-table-body-row d-flex">
+                                <div class="objectives-table-body-item item-one division">
+                                    <div class="objectives-type-item-wrapper" type="button">
+                                        <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
+                                        <button>Division</button>
+                                    </div>
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-body-item item-two">
+                                    Sales
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-body-item item-three">
+                                    <button>
+                                        <img src="assets/images/avatar.png" class="table-avatar-image" alt="avatar">
+                                        <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
+                                    </button>
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-body-item item-four">
+                                    <div class="objectives-description-wrapper">
+                                    By 2030 we want to be the leader in YYY with only newly launched product line
+                                    </div>
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-body-item item-five">
+                                    <div class="objectives-due-date-wrapper">
+                                    21.10.2024
+                                    </div>
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-body-item item-six">
+                                    <div class="objectives-due-progress-wrapper">
+                                        <input type="range" min="1" max="100" value="25" id="rangeInput2" oninput="amount2.value=rangeInput2.value">
+                                        <div class="progress-number">
+                                            <output
+                                            id="amount2"
+                                            name="amount2"
+                                            for="rangeInput"
+                                            class="percentage-input">25
+                                            </output>
+                                        </div>
+                                        <div class="percent">%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="objectives-table-sub-detail">
+                                <div class="text">
+                                    Objective is achieved when
+                                </div>
+                                <div class="objectives-detail-divider"><img src="assets/images/objectives_divider.svg"></div>
+                                <div class="list-items d-flex flex-column">
+                                    <div class="list-item-detail d-flex">
+                                        <li>We have companyX as client</li>
+                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                    </div>
+                                    <div class="list-item-detail d-flex">
+                                        <li>We have companyX as client</li>
+                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                    </div>
+                                    <div class="list-item-detail d-flex">
+                                        <li>We have companyX as client</li>
+                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                    </div>
+                                    <button>+ Add Condition</button>
+                                </div>
+                            </div>
+                            <div class="objectives-table-body-row d-flex">
+                                <div class="objectives-table-body-item item-one division">
+                                    <div class="objectives-type-item-wrapper" type="button">
+                                        <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
+                                        <button>Division</button>
+                                    </div>
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-body-item item-two">
+                                    Sales
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-body-item item-three">
+                                    <button>
+                                        <img src="assets/images/avatar.png" class="table-avatar-image" alt="avatar">
+                                        <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
+                                    </button>
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-body-item item-four">
+                                    <div class="objectives-description-wrapper">
+                                    By 2030 we want to be the leader in YYY with only newly launched product line
+                                    </div>
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-body-item item-five">
+                                    <div class="objectives-due-date-wrapper">
+                                    21.10.2024
+                                    </div>
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-body-item item-six">
+                                    <div class="objectives-due-progress-wrapper">
+                                        <input type="range" min="1" max="100" value="25" id="rangeInput3" oninput="amount3.value=rangeInput3.value">
+                                        <div class="progress-number">
+                                            <output
+                                            id="amount3"
+                                            name="amount3"
+                                            for="rangeInput"
+                                            class="percentage-input">25
+                                            </output>
+                                        </div>
+                                        <div class="percent">%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="objectives-table-sub-detail">
+                                <div class="text">
+                                    Objective is achieved when
+                                </div>
+                                <div class="objectives-detail-divider"><img src="assets/images/objectives_divider.svg"></div>
+                                <div class="list-items d-flex flex-column">
+                                    <div class="list-item-detail d-flex">
+                                        <li>We have companyX as client</li>
+                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                    </div>
+                                    <div class="list-item-detail d-flex">
+                                        <li>We have companyX as client</li>
+                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                    </div>
+                                    <div class="list-item-detail d-flex">
+                                        <li>We have companyX as client</li>
+                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                    </div>
+                                    <button>+ Add Condition</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="objectives-table-footer" type="button">
+                            <div class="show-more">Show 5 More</div>
                         </div>
                     </div>
                 </div>

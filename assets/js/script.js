@@ -36,7 +36,6 @@ $(document).ready(function () {
     });
 
     $(".detail-sidebar-item").click(function (e) {
-        console.log("clicked");
         e.preventDefault();
         let subMenu = $(this).next(".detail-sidebar-sub-items");
         $(this).toggleClass("more-info");
@@ -48,6 +47,15 @@ $(document).ready(function () {
         parentClass = $(".main-content-navbar")
         $(parentClass).find(".active").removeClass("active");
         $(this).addClass("active");
+    });
+
+    $(".objectives-type-item-wrapper").click(function (e) {
+        console.log("clicked")
+        e.preventDefault();
+        let parentClass = $(this).closest(".objectives-table-body-row");
+        let subMenu = parentClass.next(".objectives-table-sub-detail");
+        $(this).toggleClass("more-info");
+        subMenu.toggleClass("more-info");
     });
 
 });
