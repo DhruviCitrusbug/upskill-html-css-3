@@ -197,243 +197,307 @@
                     <a href="#"><div class="main-content-navbar-item" type="button">Processes</div></a>
                     <a href="#"><div class="main-content-navbar-item" type="button">Feedback</div></a>
                 </div>
-                <div id="objectives-container">
-                    <div class="objectives-header d-flex justify-content-between align-items-center">
-                        <h2>Objectives</h2>
-                        <div class="d-flex align-items-center objectives-filter">
-                            <div class="d-flex align-items-center filter-options">
-                                <p>Year:</p>
-                                <button selected>2022</button>
-                                <button>2021</button>
-                                <button>2020</button>
+                <div id="detail-section-wrapper">
+                    <div id="objectives-container" class="container-style">
+                        <div class="objectives-header d-flex justify-content-between align-items-center">
+                            <h2>Objectives</h2>
+                            <div class="d-flex align-items-center objectives-filter">
+                                <div class="d-flex align-items-center filter-options">
+                                    <p>Year:</p>
+                                    <button selected>2022</button>
+                                    <button>2021</button>
+                                    <button>2020</button>
+                                </div>
+                                <div class="d-flex align-items-center filter-options">
+                                    <p>Select Type(s):</p>
+                                    <button selected>Company</button>
+                                    <button selected>Division</button>
+                                    <button selected>Individual</button>
+                                </div>
+                                <button>+ Add Objective</button>
                             </div>
-                            <div class="d-flex align-items-center filter-options">
-                                <p>Select Type(s):</p>
-                                <button selected>Company</button>
-                                <button selected>Division</button>
-                                <button selected>Individual</button>
+                        </div>
+                        <div class="objectives-table">
+                            <div class="objectives-table-header d-flex">
+                                <div class="objectives-table-header-item item-one">Objective Type</div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-header-item item-two">Division</div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-header-item item-three">Responsible</div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-header-item item-four">Description</div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-header-item item-five">Due Date</div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="objectives-table-header-item item-six">Progress</div>
                             </div>
-                            <button>+ Add Objective</button>
+                            <div class="objectives-table-body d-flex flex-column">
+                                <div class="objectives-table-body-row d-flex">
+                                    <div class="objectives-table-body-item item-one company">
+                                        <div class="objectives-type-item-wrapper" type="button">
+                                            <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
+                                            <button>Company</button>
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-two">
+                                        CEO
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-three">
+                                        <button>
+                                            <img src="assets/images/avatar.png" class="table-avatar-image" alt="avatar">
+                                            <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
+                                        </button>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-four">
+                                        <div class="objectives-description-wrapper">
+                                        By 2030 we want to be the leader in XXX with only newly launched product line
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-five">
+                                        <div class="objectives-due-date-wrapper">
+                                        21.10.2029
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-six">
+                                        <div class="objectives-due-progress-wrapper">
+                                            <input type="range" min="1" max="100" value="25" id="rangeInput1" oninput="amount1.value=rangeInput1.value">
+                                            <div class="progress-number">
+                                                <output
+                                                id="amount1"
+                                                name="amount1"
+                                                for="rangeInput"
+                                                class="percentage-input">25</output>
+                                            </div>
+                                            <div class="percent">%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="objectives-table-sub-detail">
+                                    <div class="text">
+                                        Objective is achieved when
+                                    </div>
+                                    <div class="objectives-detail-divider"><img src="assets/images/objectives_divider.svg"></div>
+                                    <div class="list-items d-flex flex-column">
+                                        <div class="list-item-detail d-flex">
+                                            <li>We have companyX as client</li>
+                                            <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                        </div>
+                                        <div class="list-item-detail d-flex">
+                                            <li>We have companyX as client</li>
+                                            <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                        </div>
+                                        <div class="list-item-detail d-flex">
+                                            <li>We have companyX as client</li>
+                                            <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                        </div>
+                                        <button>+ Add Condition</button>
+                                    </div>
+                                </div>
+                                <div class="objectives-table-body-row d-flex">
+                                    <div class="objectives-table-body-item item-one division">
+                                        <div class="objectives-type-item-wrapper" type="button">
+                                            <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
+                                            <button>Division</button>
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-two">
+                                        Sales
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-three">
+                                        <button>
+                                            <img src="assets/images/avatar.png" class="table-avatar-image" alt="avatar">
+                                            <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
+                                        </button>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-four">
+                                        <div class="objectives-description-wrapper">
+                                        By 2030 we want to be the leader in YYY with only newly launched product line
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-five">
+                                        <div class="objectives-due-date-wrapper">
+                                        21.10.2024
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-six">
+                                        <div class="objectives-due-progress-wrapper">
+                                            <input type="range" min="1" max="100" value="25" id="rangeInput2" oninput="amount2.value=rangeInput2.value">
+                                            <div class="progress-number">
+                                                <output
+                                                id="amount2"
+                                                name="amount2"
+                                                for="rangeInput"
+                                                class="percentage-input">25
+                                                </output>
+                                            </div>
+                                            <div class="percent">%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="objectives-table-sub-detail">
+                                    <div class="text">
+                                        Objective is achieved when
+                                    </div>
+                                    <div class="objectives-detail-divider"><img src="assets/images/objectives_divider.svg"></div>
+                                    <div class="list-items d-flex flex-column">
+                                        <div class="list-item-detail d-flex">
+                                            <li>We have companyX as client</li>
+                                            <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                        </div>
+                                        <div class="list-item-detail d-flex">
+                                            <li>We have companyX as client</li>
+                                            <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                        </div>
+                                        <div class="list-item-detail d-flex">
+                                            <li>We have companyX as client</li>
+                                            <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                        </div>
+                                        <button>+ Add Condition</button>
+                                    </div>
+                                </div>
+                                <div class="objectives-table-body-row d-flex">
+                                    <div class="objectives-table-body-item item-one division">
+                                        <div class="objectives-type-item-wrapper" type="button">
+                                            <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
+                                            <button>Division</button>
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-two">
+                                        Sales
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-three">
+                                        <button>
+                                            <img src="assets/images/avatar.png" class="table-avatar-image" alt="avatar">
+                                            <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
+                                        </button>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-four">
+                                        <div class="objectives-description-wrapper">
+                                        By 2030 we want to be the leader in YYY with only newly launched product line
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-five">
+                                        <div class="objectives-due-date-wrapper">
+                                        21.10.2024
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="objectives-table-body-item item-six">
+                                        <div class="objectives-due-progress-wrapper">
+                                            <input type="range" min="1" max="100" value="25" id="rangeInput3" oninput="amount3.value=rangeInput3.value">
+                                            <div class="progress-number">
+                                                <output
+                                                id="amount3"
+                                                name="amount3"
+                                                for="rangeInput"
+                                                class="percentage-input">25
+                                                </output>
+                                            </div>
+                                            <div class="percent">%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="objectives-table-sub-detail">
+                                    <div class="text">
+                                        Objective is achieved when
+                                    </div>
+                                    <div class="objectives-detail-divider"><img src="assets/images/objectives_divider.svg"></div>
+                                    <div class="list-items d-flex flex-column">
+                                        <div class="list-item-detail d-flex">
+                                            <li>We have companyX as client</li>
+                                            <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                        </div>
+                                        <div class="list-item-detail d-flex">
+                                            <li>We have companyX as client</li>
+                                            <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                        </div>
+                                        <div class="list-item-detail d-flex">
+                                            <li>We have companyX as client</li>
+                                            <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
+                                        </div>
+                                        <button>+ Add Condition</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="objectives-table-footer" type="button">
+                                <div class="show-more">Show 5 More</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="objectives-table">
-                        <div class="objectives-table-header d-flex">
-                            <div class="objectives-table-header-item item-one">Objective Type</div>
-                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                            <div class="objectives-table-header-item item-two">Division</div>
-                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                            <div class="objectives-table-header-item item-three">Responsible</div>
-                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                            <div class="objectives-table-header-item item-four">Description</div>
-                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                            <div class="objectives-table-header-item item-five">Due Date</div>
-                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                            <div class="objectives-table-header-item item-six">Progress</div>
-                        </div>
-                        <div class="objectives-table-body d-flex flex-column">
-                            <div class="objectives-table-body-row d-flex">
-                                <div class="objectives-table-body-item item-one company">
-                                    <div class="objectives-type-item-wrapper" type="button">
-                                        <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
-                                        <button>Company</button>
-                                    </div>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-two">
-                                    CEO
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-three">
-                                    <button>
-                                        <img src="assets/images/avatar.png" class="table-avatar-image" alt="avatar">
-                                        <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
-                                    </button>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-four">
-                                    <div class="objectives-description-wrapper">
-                                    By 2030 we want to be the leader in XXX with only newly launched product line
-                                    </div>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-five">
-                                    <div class="objectives-due-date-wrapper">
-                                    21.10.2029
-                                    </div>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-six">
-                                    <div class="objectives-due-progress-wrapper">
-                                        <input type="range" min="1" max="100" value="25" id="rangeInput1" oninput="amount1.value=rangeInput1.value">
-                                        <div class="progress-number">
-                                            <output
-                                            id="amount1"
-                                            name="amount1"
-                                            for="rangeInput"
-                                            class="percentage-input">25</output>
-                                        </div>
-                                        <div class="percent">%</div>
-                                    </div>
-                                </div>
+                    <div id="prioritized-task-container" class="container-style">
+                        <div class="prioritized-task-header d-flex justify-content-between align-items-center">
+                            <div class="prioritized-task-title d-flex align-items-center">
+                                <img src="assets/images/dropdown.svg" alt="dropdown">
+                                <h2>Prioritized Tasks</h2>
                             </div>
-                            <div class="objectives-table-sub-detail">
-                                <div class="text">
-                                    Objective is achieved when
+                            <div class="prioritized-task-options d-flex align-items-center">
+                                <div class="prioritized-task-option d-flex align-items-center">
+                                    <input class="form-check-input" type="checkbox" value="" id="completedCheckbox">
+                                    <label class="form-check-label" for="completedCheckbox">
+                                        Show Completed
+                                    </label>                               
                                 </div>
-                                <div class="objectives-detail-divider"><img src="assets/images/objectives_divider.svg"></div>
-                                <div class="list-items d-flex flex-column">
-                                    <div class="list-item-detail d-flex">
-                                        <li>We have companyX as client</li>
-                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
-                                    </div>
-                                    <div class="list-item-detail d-flex">
-                                        <li>We have companyX as client</li>
-                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
-                                    </div>
-                                    <div class="list-item-detail d-flex">
-                                        <li>We have companyX as client</li>
-                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
-                                    </div>
-                                    <button>+ Add Condition</button>
-                                </div>
-                            </div>
-                            <div class="objectives-table-body-row d-flex">
-                                <div class="objectives-table-body-item item-one division">
-                                    <div class="objectives-type-item-wrapper" type="button">
-                                        <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
-                                        <button>Division</button>
-                                    </div>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-two">
-                                    Sales
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-three">
-                                    <button>
-                                        <img src="assets/images/avatar.png" class="table-avatar-image" alt="avatar">
-                                        <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
-                                    </button>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-four">
-                                    <div class="objectives-description-wrapper">
-                                    By 2030 we want to be the leader in YYY with only newly launched product line
-                                    </div>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-five">
-                                    <div class="objectives-due-date-wrapper">
-                                    21.10.2024
-                                    </div>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-six">
-                                    <div class="objectives-due-progress-wrapper">
-                                        <input type="range" min="1" max="100" value="25" id="rangeInput2" oninput="amount2.value=rangeInput2.value">
-                                        <div class="progress-number">
-                                            <output
-                                            id="amount2"
-                                            name="amount2"
-                                            for="rangeInput"
-                                            class="percentage-input">25
-                                            </output>
-                                        </div>
-                                        <div class="percent">%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="objectives-table-sub-detail">
-                                <div class="text">
-                                    Objective is achieved when
-                                </div>
-                                <div class="objectives-detail-divider"><img src="assets/images/objectives_divider.svg"></div>
-                                <div class="list-items d-flex flex-column">
-                                    <div class="list-item-detail d-flex">
-                                        <li>We have companyX as client</li>
-                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
-                                    </div>
-                                    <div class="list-item-detail d-flex">
-                                        <li>We have companyX as client</li>
-                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
-                                    </div>
-                                    <div class="list-item-detail d-flex">
-                                        <li>We have companyX as client</li>
-                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
-                                    </div>
-                                    <button>+ Add Condition</button>
-                                </div>
-                            </div>
-                            <div class="objectives-table-body-row d-flex">
-                                <div class="objectives-table-body-item item-one division">
-                                    <div class="objectives-type-item-wrapper" type="button">
-                                        <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
-                                        <button>Division</button>
-                                    </div>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-two">
-                                    Sales
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-three">
-                                    <button>
-                                        <img src="assets/images/avatar.png" class="table-avatar-image" alt="avatar">
-                                        <span class="dropdown"><img src="assets/images/dropdown.svg"></span>
-                                    </button>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-four">
-                                    <div class="objectives-description-wrapper">
-                                    By 2030 we want to be the leader in YYY with only newly launched product line
-                                    </div>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-five">
-                                    <div class="objectives-due-date-wrapper">
-                                    21.10.2024
-                                    </div>
-                                </div>
-                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
-                                <div class="objectives-table-body-item item-six">
-                                    <div class="objectives-due-progress-wrapper">
-                                        <input type="range" min="1" max="100" value="25" id="rangeInput3" oninput="amount3.value=rangeInput3.value">
-                                        <div class="progress-number">
-                                            <output
-                                            id="amount3"
-                                            name="amount3"
-                                            for="rangeInput"
-                                            class="percentage-input">25
-                                            </output>
-                                        </div>
-                                        <div class="percent">%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="objectives-table-sub-detail">
-                                <div class="text">
-                                    Objective is achieved when
-                                </div>
-                                <div class="objectives-detail-divider"><img src="assets/images/objectives_divider.svg"></div>
-                                <div class="list-items d-flex flex-column">
-                                    <div class="list-item-detail d-flex">
-                                        <li>We have companyX as client</li>
-                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
-                                    </div>
-                                    <div class="list-item-detail d-flex">
-                                        <li>We have companyX as client</li>
-                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
-                                    </div>
-                                    <div class="list-item-detail d-flex">
-                                        <li>We have companyX as client</li>
-                                        <a href="#"><span><img class="delete-image" src="assets/images/delete.svg"></span></a>
-                                    </div>
-                                    <button>+ Add Condition</button>
-                                </div>
+                                <button class="prioritized-task-option d-flex align-items-center">
+                                    + Add Task
+                                </button>
                             </div>
                         </div>
-                        <div class="objectives-table-footer" type="button">
-                            <div class="show-more">Show 5 More</div>
+                        <div class="prioritized-task-table">
+                            <div class="prioritized-task-table-header d-flex align-items-center">
+                                <div class="prioritized-task-table-header-item item-one">
+                                    Task
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="prioritized-task-table-header-item item-two d-flex">
+                                    Due Date
+                                    <span><img src="assets/images/filter.svg" alt="filter"></span>
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="prioritized-task-table-header-item item-three">
+                                    Time Remaining
+                                </div>
+                                <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                <div class="prioritized-task-table-header-item item-four d-flex">
+                                    Progress
+                                    <span><img src="assets/images/filter.svg" alt="filter"></span>
+                                </div>
+                            </div>
+                            <div class="prioritized-task-table-body d-flex flex-column">
+                                <div class="prioritized-task-table-row d-flex align-items-center">
+                                    <div class="prioritized-task-table-body-item item-one">
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="prioritized-task-table-body-item item-two">
+                                        <div class="prioritized-due-date-wrapper">
+                                        01.01.2023
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="prioritized-task-table-body-item item-three">
+                                        <div class="time-remining-wrapper">
+                                            <i class="fa-clock-o"></i>
+                                            28d
+                                        </div>
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="prioritized-task-table-body-item item-four">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
