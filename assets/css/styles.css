@@ -15,6 +15,9 @@
     --Division-Text-Color: #B26000;
     --Progress-Red-Color: #D42145;
     --Progress-Thumb-Shadow: #0000001A;
+    --Green-Active-Color: #2FC22C;
+    --High-Text-Color: #B20024;
+    --High-Background-Color: #FAEBEE;
 
     /* Variables */
 
@@ -757,11 +760,11 @@ input[type='range']::-webkit-slider-thumb {
     color: var(--White) !important;
 }
 
-.objectives-table-footer {
+.table-footer {
     padding: 1.6rem 0rem 2.4rem 0rem;
 }
 
-.objectives-table-footer .show-more {
+.table-footer .show-more {
     font-weight: 600;
     font-size: 1.2rem !important;
     line-height: 2.4rem;
@@ -773,6 +776,7 @@ input[type='range']::-webkit-slider-thumb {
     justify-content: space-between;
     padding: 1.6rem 0rem;
     border-bottom: 1px solid var(--Divider-Color);
+    flex-wrap: wrap;
 }
 
 .prioritized-task-title {
@@ -818,7 +822,7 @@ input[type='range']::-webkit-slider-thumb {
     color: var(--White) !important;
 }
 
-input[type="checkbox"] {
+.prioritized-task-option input[type="checkbox"] {
     width: 1.8rem;
     height: 1.8rem;
     border: 1px solid var(--Divider-Color);
@@ -835,6 +839,7 @@ input[type="checkbox"] {
 .prioritized-task-table-header {
     overflow: auto;
     min-width: fit-content;
+    border-bottom: 1px solid var(--Divider-Color);
 }
 
 .prioritized-task-table-header-item {
@@ -844,6 +849,10 @@ input[type="checkbox"] {
     line-height: 1.8rem;
     color: var(--Text-Color-Gray) !important;
     gap: 1rem;
+}
+
+.prioritized-task-table-row {
+    border-bottom: 1px solid var(--Divider-Color);
 }
 
 .prioritized-task-table .item-one {
@@ -891,6 +900,150 @@ input[type="checkbox"] {
 
 .prioritized-task-table-body-item.item-four {
     padding: 1.6rem;
+}
+
+.prioritized-task-table-body-item.item-one {
+    gap: 1.2rem;
+}
+
+.prioritized-task-checkbox {
+    position: relative;
+}
+
+.prioritized-task-checkbox label {
+    border: 1px solid var(--Divider-Color);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 2.4rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2.4rem;
+}
+
+.prioritized-task-checkbox label:after {
+    border: 2px solid var(--Divider-Color);
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 0.6rem;
+    left: 0.5rem;
+    opacity: 0;
+    position: absolute;
+    top: 0.65rem;
+    transform: rotate(-45deg);
+    width: 1.2rem;
+}
+
+.prioritized-task-checkbox input[type="checkbox"] {
+    visibility: hidden;
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.prioritized-task-checkbox input[type="checkbox"]:checked + label {
+    background-color: var(--Green-Active-Color);
+    border-color: var(--Green-Active-Color);
+}
+
+.prioritized-task-checkbox input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+.task-name-wrapper {
+    padding: 1.2rem;
+    flex-grow: 1;
+}
+
+.task-name {
+    border-radius: 0.8rem;
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    border: 1px solid var(--Divider-Color);
+}
+
+.task-name.active {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: Auto;
+    color: var(--Text-Color-Blue) !important;
+}
+
+.time-remaining-wrapper {
+    background-color: var(--Background-Color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.6rem;
+    width: fit-content;
+}
+
+.clock-icon {
+    font-family: "Font Awesome 6 Free" !important;
+    width: 1.4rem;
+    height: 1.4rem;
+    color: var(--Text-Color-Dark-Gray) !important;
+}
+
+.time-remaining {
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    color: var(--Text-Color-Dark-Gray) !important;
+}
+
+.time-remaining-wrapper.overdue {
+    color: var(--High-Text-Color) !important;
+    background-color: var(--High-Background-Color);
+}
+
+.time-remaining-wrapper.overdue .time-remaining {
+    color: var(--High-Text-Color) !important;
+}
+
+.time-remaining-wrapper.overdue .clock-icon {
+    color: var(--High-Text-Color) !important;
+}
+
+.priority-btn {
+    padding: 0.3rem 0.8rem;
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    border-radius: 0.6rem;
+    border: none;
+    gap: 0.4rem;
+}
+
+.priority-btn.high {
+    color: var(--High-Text-Color) !important;
+    background-color: var(--High-Background-Color);
+}
+
+.priority-btn.high .chevron-icon {
+    color: var(--High-Text-Color) !important;
+}
+
+.priority-btn.medium {
+    color: var(--Division-Text-Color) !important;
+    background-color: var(--Division-BG-Color);
+}
+
+.priority-btn.medium .chevron-icon {
+    color: var(--Division-Text-Color) !important;
+}
+
+.priority-btn.low {
+    color: var(--Company-Text-Color) !important;
+    background-color: var(--Company-BG-Color);
+}
+
+.priority-btn.low .chevron-icon {
+    color: var(--Company-Text-Color) !important;
+}
+
+.chevron-icon {
+    font-family: "Font Awesome 6 Free" !important;
 }
 
 @media (max-width: 1242px) {
