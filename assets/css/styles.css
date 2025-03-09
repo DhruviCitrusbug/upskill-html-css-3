@@ -18,6 +18,7 @@
     --Green-Active-Color: #2FC22C;
     --High-Text-Color: #B20024;
     --High-Background-Color: #FAEBEE;
+    --KPI-Blue-Color: #0A0AA8;
 
     /* Variables */
 
@@ -390,7 +391,7 @@ hr .navbar-divider {
     color: var(--Text-Color-Dark-Gray) !important;
 }
 
-.main-content-navbar-item.active {
+a.active {
     color: var(--Text-Color-Blue) !important;
     border-bottom: var(--Text-Color-Blue) solid 2px;
 }
@@ -786,6 +787,7 @@ input[type='range']::-webkit-slider-thumb {
 .prioritized-task-title img {
     width: 1.8rem;
     height: auto;
+    transform: rotate(180deg);
 }
 
 .prioritized-task-options {
@@ -986,6 +988,14 @@ input[type='range']::-webkit-slider-thumb {
     color: var(--Text-Color-Dark-Gray) !important;
 }
 
+.clock-icon::before {
+    width: 1.4rem;
+    height: 1.4rem;
+    display: inline-block;
+    top: 0.2rem;
+    position: relative;
+}
+
 .time-remaining {
     font-weight: 600;
     font-size: 1.2rem !important;
@@ -1115,6 +1125,288 @@ input[type='range']::-webkit-slider-thumb {
 .add-kpi-btn:hover {
     background-color: var(--Text-Color-Blue);
     color: var(--White) !important;
+}
+
+.kpi-item {
+    padding: 2.4rem 2.4rem 2rem 2.4rem;
+}
+
+.kpi-item-table {
+    display: none;
+}
+
+.kpi-item.expanded #KPIDropdown {
+    transform: rotate(180deg);
+}
+
+.kpi-item.expanded .kpi-item-table{
+    display: block;
+}
+
+.kpi-item-header {
+    padding: 1.8rem 1.6rem;
+    gap: 1.6rem;
+    border-radius: 0.8rem;
+    background-color: var(--Background-Color);
+}
+
+.kpi-item-header img {
+    width: 1.8rem;
+    height: auto;
+}
+
+.kpi-item-name-wrapper {
+    gap: 0.8rem;
+}
+
+.kpi-item-name-wrapper .kpi-item-name {
+    font-weight: 600;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    color: var(--Text-Color) !important;
+}
+
+.kpi-item-name-wrapper .kpi-item-count {
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    color: var(--KPI-Blue-Color) !important;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.6rem;
+    background-color: var(--Button-BG-Color);
+}
+
+.kpi-table-header {
+    border-bottom: var(--Divider-Color) solid 1px;
+    overflow: auto;
+    min-width: fit-content
+}
+
+.kpi-table-header-item {
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    color: var(--Text-Color-Gray) !important;
+    padding: 1.6rem;
+}
+
+.kpi-item-table {
+    overflow-x: auto ;
+}
+
+.kpi-item-table .item-one {
+    min-width: 24.5%;
+    width: 24rem;
+}
+
+.kpi-item-table .item-two {
+    min-width: 10%;
+    width: 10.2rem;
+}
+
+.kpi-item-table .item-three {
+    min-width: 7%;
+    width: 6.8rem;
+}
+
+.kpi-item-table .item-four {
+    min-width: 8.2%;
+    width: 8rem;
+}
+
+.kpi-item-table .item-five {
+    min-width: 12.4%;
+    width: 12.4rem;
+}
+
+.kpi-item-table .item-six {
+    min-width: 12.4%;
+    width: 12.4rem;
+}
+
+.kpi-item-table .item-seven {
+    min-width: 12.4%;
+    width: 12.4rem;
+}
+
+.kpi-item-table .item-eight {
+    min-width: 12.4%;
+    width: 12.4rem;
+}
+
+.kpi-table-body {
+    overflow: auto;
+    min-width: fit-content;
+}
+
+.kpi-table-row {
+    position: relative;
+    border-bottom: 1px solid var(--Divider-Color);
+}
+
+.kpi-table-body-item.item-one {
+    padding: 1.7rem 1.6rem;
+}
+
+.kpi-table-row.open {
+    position: relative;
+    border-bottom: none;
+}
+
+.kpi-table-row.open .kpi-table-body-item.item-one {
+    padding-left: 5rem;
+}
+
+.kpi-table-row::before {
+    content: none;
+}
+
+.kpi-table-row.open::before {
+    content: url("../images/chevron_up.svg");
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    left: 1.6rem;
+}
+
+.kpi-table-row.open::after {
+    content: "";
+    position: absolute;
+    left: 5rem;
+    bottom: 0;
+    width: calc(100% - 5rem);
+    height: 1px;
+    background-color: var(--Divider-Color);
+}
+
+.kpi-table-sub-rows {
+    position: relative;
+}
+
+.kpi-table-sub-rows .kpi-table-body-item.item-one {
+    padding-left: 5rem;
+}
+
+.kpi-table-sub-rows .kpi-table-row {
+    position: relative;
+    border-bottom: none
+}
+
+.kpi-table-sub-rows::before {
+    content: url("../images/kpi-line.svg");
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    left: 1.6rem;
+}
+
+.kpi-table-sub-rows .kpi-table-row::after {
+    content: "";
+    position: absolute;
+    left: 5rem;
+    bottom: 0;
+    width: calc(100% - 5rem);
+    height: 1px;
+    background-color: var(--Divider-Color);
+}
+
+.kpi-table-body-item.item-one img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.kpi-item-detail-wrapper {
+    gap: 1.6rem;
+}
+
+.kpi-item-detail {
+    font-weight: 600;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    color: var(--Text-Color-Blue) !important;
+}
+
+.kpi-table-body-item.item-two {
+    padding: 1.6rem;
+    gap: 0.8rem;
+}
+
+.kpi-table-body-item.item-two img {
+    width: 2.6rem;
+    height: auto;
+}
+
+.kpi-item-two-detail {
+    font-weight: 400;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    color: var(--Text-Color-Dark-Gray) !important;
+}
+
+.kpi-table-body-item.item-three {
+    padding: 1.9rem 2.5rem;
+}
+
+.kpi-table-body-item.item-three img {
+    width: 1.8rem;
+    height: auto;
+}
+
+.kpi-table-body-item.item-four {
+    padding: 1.7rem 1.6rem;
+    font-weight: 600;
+    font-size: 1.4rem !important;
+    line-height: 2.2rem;
+    color: var(--Text-Color) !important;
+}
+
+.unit-detail {
+    padding: 0.3rem 0.8rem;
+    text-align: end;
+    font-weight: 600;
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+    border-radius: 0.6rem;
+}
+
+.kpi-table-body-item.item-five {
+    padding: 1.6rem;
+}
+
+.kpi-item-five-detail {  
+    color: var(--Text-Color-Dark-Gray) !important;
+    background-color: var(--Background-Color);
+}
+
+.kpi-table-body-item.item-six {
+    padding: 1.6rem;
+}
+
+.kpi-item-six-detail {  
+    color: var(--KPI-Blue-Color) !important;
+    background-color: var(--Button-BG-Color);
+}
+
+.kpi-table-body-item.item-seven {
+    padding: 1.6rem;
+}
+
+.kpi-item-seven-detail {  
+    color: var(--Company-Text-Color) !important;
+    background-color: var(--Company-BG-Color);
+}
+
+.kpi-table-body-item.item-eight {
+    padding: 1.6rem;
+}
+
+.kpi-item-eight-detail {  
+    color: var(--Text-Color-Dark-Gray) !important;
+    background-color: var(--Background-Color);
+}
+
+.kpis-footer {
+    padding: 0rem 0rem 2.4rem 2.4rem;
 }
 
 @media (max-width: 1242px) {

@@ -188,17 +188,17 @@
                     <button type="button" class="d-flex align-items-center"><span><img src="assets/images/settings.svg"></span>Radical Focus Settings</button>
                 </div>
                 <div class="main-content-navbar d-flex">
-                    <a href="#"><div class="main-content-navbar-item active" type="button">Objectives</div></a>
-                    <a href="#"><div class="main-content-navbar-item" type="button">Priorities</div></a>
-                    <a href="#"><div class="main-content-navbar-item" type="button">KPIs</div></a>
-                    <a href="#"><div class="main-content-navbar-item" type="button">Initiatives</div></a>
-                    <a href="#"><div class="main-content-navbar-item" type="button">Recurring Activities</div></a>
-                    <a href="#"><div class="main-content-navbar-item" type="button">Management Meetings</div></a>
-                    <a href="#"><div class="main-content-navbar-item" type="button">Processes</div></a>
-                    <a href="#"><div class="main-content-navbar-item" type="button">Feedback</div></a>
+                    <a href="#objectives-container" class="active"><div class="main-content-navbar-item">Objectives</div></a>
+                    <a href="#prioritized-task-container"><div class="main-content-navbar-item">Priorities</div></a>
+                    <a href="#kpis-container"><div class="main-content-navbar-item">KPIs</div></a>
+                    <a href="#"><div class="main-content-navbar-item">Initiatives</div></a>
+                    <a href="#"><div class="main-content-navbar-item">Recurring Activities</div></a>
+                    <a href="#"><div class="main-content-navbar-item">Management Meetings</div></a>
+                    <a href="#"><div class="main-content-navbar-item">Processes</div></a>
+                    <a href="#"><div class="main-content-navbar-item">Feedback</div></a>
                 </div>
                 <div id="detail-section-wrapper">
-                    <div id="objectives-container" class="container-style">
+                    <section id="objectives-container" class="container-style">
                         <div class="objectives-header d-flex justify-content-between align-items-center">
                             <h2>Objectives</h2>
                             <div class="d-flex align-items-center objectives-filter">
@@ -437,11 +437,11 @@
                                 <div class="show-more">Show 5 More</div>
                             </div>
                         </div>
-                    </div>
-                    <div id="prioritized-task-container" class="container-style">
+                    </section>
+                    <section id="prioritized-task-container" class="container-style">
                         <div class="prioritized-task-header d-flex justify-content-between align-items-center">
                             <div class="prioritized-task-title d-flex align-items-center">
-                                <img src="assets/images/dropdown.svg" alt="dropdown">
+                                <img src="assets/images/dropdown.svg" id="prioritizedTaskDropdown" type="button" alt="dropdown">
                                 <h2>Prioritized Tasks</h2>
                             </div>
                             <div class="prioritized-task-options d-flex align-items-center">
@@ -480,8 +480,8 @@
                                 <div class="prioritized-task-table-row d-flex align-items-center">
                                     <div class="prioritized-task-table-body-item item-one d-flex align-items-center">
                                         <div class="prioritized-task-checkbox d-flex align-items-center">
-                                            <input type="checkbox" id="checkbox" />
-                                            <label for="checkbox"></label>
+                                            <input type="checkbox" id="checkbox1" />
+                                            <label for="checkbox1"></label>
                                         </div>
                                         <div class="task-name-wrapper">
                                             <div class="task-name active">
@@ -517,8 +517,8 @@
                                 <div class="prioritized-task-table-row d-flex align-items-center">
                                     <div class="prioritized-task-table-body-item item-one d-flex align-items-center">
                                         <div class="prioritized-task-checkbox d-flex align-items-center">
-                                            <input type="checkbox" id="checkbox" />
-                                            <label for="checkbox"></label>
+                                            <input type="checkbox" id="checkbox2" />
+                                            <label for="checkbox2"></label>
                                         </div>
                                         <div class="task-name-wrapper">
                                             <div class="task-name">
@@ -554,8 +554,8 @@
                                 <div class="prioritized-task-table-row d-flex align-items-center">
                                     <div class="prioritized-task-table-body-item item-one d-flex align-items-center">
                                         <div class="prioritized-task-checkbox d-flex align-items-center">
-                                            <input type="checkbox" checked id="checkbox" />
-                                            <label for="checkbox"></label>
+                                            <input type="checkbox" checked id="checkbox3" />
+                                            <label for="checkbox3"></label>
                                         </div>
                                         <div class="task-name-wrapper">
                                             <div class="task-name">
@@ -591,8 +591,8 @@
                                 <div class="prioritized-task-table-row d-flex align-items-center">
                                     <div class="prioritized-task-table-body-item item-one d-flex align-items-center">
                                         <div class="prioritized-task-checkbox d-flex align-items-center">
-                                            <input type="checkbox" checked id="checkbox" />
-                                            <label for="checkbox"></label>
+                                            <input type="checkbox" checked id="checkbox4" />
+                                            <label for="checkbox4"></label>
                                         </div>
                                         <div class="task-name-wrapper">
                                             <div class="task-name">
@@ -630,8 +630,8 @@
                                 <div class="show-more">Show 5 More</div>
                             </div>
                         </div>
-                    </div>
-                    <div id="kpis-container" class="container-style">
+                    </section>
+                    <section id="kpis-container" class="container-style">
                         <div class="kpis-header d-flex align-items-center justify-content-between">
                             <div class="kpis-header-options d-flex align-items-center">
                                 <h2>KPIs</h2>
@@ -658,7 +658,654 @@
                                 + Add KPI
                             </button>
                         </div>
-                    </div>
+                        <div class="kpi-item expanded">
+                            <div class="kpi-item-header d-flex align-items-center">
+                                <img src="assets/images/dropdown.svg" id="KPIDropdown" type="button">
+                                <div class="kpi-item-name-wrapper d-flex align-items-center">
+                                    <div class="kpi-item-name">
+                                        Plastics
+                                    </div>
+                                    <div class="kpi-item-count">
+                                        4
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kpi-item-table">
+                                <div class="kpi-table-header d-flex align-items-center">
+                                    <div class="kpi-table-header-item item-one">
+                                        KPI
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-two">
+                                        Responsible
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-three">
+                                        Graph
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-four">
+                                        Unit
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-five">
+                                        Monthly Target
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-six">
+                                        Monthly Actual
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-seven">
+                                        Monthly, %
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-eight">
+                                        YTD Target
+                                    </div>
+                                </div>
+                                <div class="kpi-table-body">
+                                    <div class="kpi-table-row open d-flex align-items-center">
+                                        <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between" id="CostPerLead" type="button">
+                                            <div class="kpi-item-detail">
+                                                Cost Per Lead
+                                            </div>
+                                            <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                            <img src="assets/images/avatar.png">
+                                            <div class="kpi-item-two-detail">P.G.</div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-three">
+                                            <img src="assets/images/presentation.svg">
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-four">
+                                            €/#
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-five">
+                                            <div class="unit-detail kpi-item-five-detail">
+                                                150
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-six">
+                                            <div class="unit-detail kpi-item-six-detail">
+                                                1,583,438
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-seven">
+                                            <div class="unit-detail kpi-item-seven-detail">
+                                                107.21%
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-eight">
+                                            <div class="unit-detail kpi-item-eight-detail">
+                                                1,476,923.07
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kpi-table-sub-rows">
+                                        <div class="kpi-table-row d-flex align-items-center">
+                                            <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between">
+                                                <div class="kpi-item-detail">
+                                                    DB VI Marge
+                                                </div>
+                                                <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                                <img src="assets/images/avatar.png">
+                                                <div class="kpi-item-two-detail">P.G.</div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-three">
+                                                <img src="assets/images/presentation.svg">
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-four">
+                                                €
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-five">
+                                                <div class="unit-detail kpi-item-five-detail">
+                                                    150,000
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-six">
+                                                <div class="unit-detail kpi-item-six-detail">
+                                                    -19.849
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-seven">
+                                                <div class="unit-detail kpi-item-seven-detail">
+                                                    -26.55%
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-eight">
+                                                <div class="unit-detail kpi-item-eight-detail">
+                                                    74,750
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="kpi-table-row d-flex align-items-center">
+                                            <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between">
+                                                <div class="kpi-item-detail">
+                                                    Leads
+                                                </div>
+                                                <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                                <img src="assets/images/avatar.png">
+                                                <div class="kpi-item-two-detail">P.G.</div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-three">
+                                                <img src="assets/images/presentation.svg">
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-four">
+                                                #
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-five">
+                                                <div class="unit-detail kpi-item-five-detail">
+                                                    1000
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-six">
+                                                <div class="unit-detail kpi-item-six-detail">
+                                                    -19.849
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-seven">
+                                                <div class="unit-detail kpi-item-seven-detail">
+                                                    -26.55%
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-eight">
+                                                <div class="unit-detail kpi-item-eight-detail">
+                                                    74,750
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kpi-table-row d-flex align-items-center">
+                                        <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between">
+                                            <div class="kpi-item-detail">
+                                                DB VI
+                                            </div>
+                                            <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                            <img src="assets/images/avatar.png">
+                                            <div class="kpi-item-two-detail">P.G.</div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-three">
+                                            <img src="assets/images/presentation.svg">
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-four">
+                                            €
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-five">
+                                            <div class="unit-detail kpi-item-five-detail">
+                                                74,750
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-six">
+                                            <div class="unit-detail kpi-item-six-detail">
+                                                -19,849
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-seven">
+                                            <div class="unit-detail kpi-item-seven-detail">
+                                                -26.55%
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-eight">
+                                            <div class="unit-detail kpi-item-eight-detail">
+                                                74,750
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kpi-table-row d-flex align-items-center">
+                                        <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between">
+                                            <div class="kpi-item-detail">
+                                                Manufacturing costs
+                                            </div>
+                                            <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                            <img src="assets/images/avatar.png">
+                                            <div class="kpi-item-two-detail">P.G.</div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-three">
+                                            <img src="assets/images/presentation.svg">
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-four">
+                                            %
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-five">
+                                            <div class="unit-detail kpi-item-five-detail">
+                                                3.22
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-six">
+                                            <div class="unit-detail kpi-item-six-detail">
+                                                13.08
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-seven">
+                                            <div class="unit-detail kpi-item-seven-detail">
+                                                9.85%
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-eight">
+                                            <div class="unit-detail kpi-item-eight-detail">
+                                                3.22
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kpi-table-row d-flex align-items-center">
+                                        <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between">
+                                            <div class="kpi-item-detail">
+                                                DB VI Marge
+                                            </div>
+                                            <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                            <img src="assets/images/avatar.png">
+                                            <div class="kpi-item-two-detail">P.G.</div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-three">
+                                            <img src="assets/images/presentation.svg">
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-four">
+                                            %
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-five">
+                                            <div class="unit-detail kpi-item-five-detail">
+                                                5
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-six">
+                                            <div class="unit-detail kpi-item-six-detail">
+                                                -1.24
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-seven">
+                                            <div class="unit-detail kpi-item-seven-detail">
+                                                -6.24%
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-eight">
+                                            <div class="unit-detail kpi-item-eight-detail">
+                                                5
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kpi-item">
+                            <div class="kpi-item-header d-flex align-items-center">
+                                <img src="assets/images/dropdown.svg" id="KPIDropdown2" type="button">
+                                <div class="kpi-item-name-wrapper d-flex align-items-center">
+                                    <div class="kpi-item-name">
+                                        Waste Disposal National
+                                    </div>
+                                    <div class="kpi-item-count">
+                                        7
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kpi-item-table">
+                                <div class="kpi-table-header d-flex align-items-center">
+                                    <div class="kpi-table-header-item item-one">
+                                        KPI
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-two">
+                                        Responsible
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-three">
+                                        Graph
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-four">
+                                        Unit
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-five">
+                                        Monthly Target
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-six">
+                                        Monthly Actual
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-seven">
+                                        Monthly, %
+                                    </div>
+                                    <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                    <div class="kpi-table-header-item item-eight">
+                                        YTD Target
+                                    </div>
+                                </div>
+                                <div class="kpi-table-body">
+                                    <div class="kpi-table-row open d-flex align-items-center">
+                                        <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between" id="CostPerLead" type="button">
+                                            <div class="kpi-item-detail">
+                                                Cost Per Lead
+                                            </div>
+                                            <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                            <img src="assets/images/avatar.png">
+                                            <div class="kpi-item-two-detail">P.G.</div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-three">
+                                            <img src="assets/images/presentation.svg">
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-four">
+                                            €/#
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-five">
+                                            <div class="unit-detail kpi-item-five-detail">
+                                                150
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-six">
+                                            <div class="unit-detail kpi-item-six-detail">
+                                                1,583,438
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-seven">
+                                            <div class="unit-detail kpi-item-seven-detail">
+                                                107.21%
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-eight">
+                                            <div class="unit-detail kpi-item-eight-detail">
+                                                1,476,923.07
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kpi-table-sub-rows">
+                                        <div class="kpi-table-row d-flex align-items-center">
+                                            <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between">
+                                                <div class="kpi-item-detail">
+                                                    DB VI Marge
+                                                </div>
+                                                <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                                <img src="assets/images/avatar.png">
+                                                <div class="kpi-item-two-detail">P.G.</div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-three">
+                                                <img src="assets/images/presentation.svg">
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-four">
+                                                €
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-five">
+                                                <div class="unit-detail kpi-item-five-detail">
+                                                    150,000
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-six">
+                                                <div class="unit-detail kpi-item-six-detail">
+                                                    -19.849
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-seven">
+                                                <div class="unit-detail kpi-item-seven-detail">
+                                                    -26.55%
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-eight">
+                                                <div class="unit-detail kpi-item-eight-detail">
+                                                    74,750
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="kpi-table-row d-flex align-items-center">
+                                            <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between">
+                                                <div class="kpi-item-detail">
+                                                    Leads
+                                                </div>
+                                                <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                                <img src="assets/images/avatar.png">
+                                                <div class="kpi-item-two-detail">P.G.</div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-three">
+                                                <img src="assets/images/presentation.svg">
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-four">
+                                                #
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-five">
+                                                <div class="unit-detail kpi-item-five-detail">
+                                                    1000
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-six">
+                                                <div class="unit-detail kpi-item-six-detail">
+                                                    -19.849
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-seven">
+                                                <div class="unit-detail kpi-item-seven-detail">
+                                                    -26.55%
+                                                </div>
+                                            </div>
+                                            <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                            <div class="kpi-table-body-item item-eight">
+                                                <div class="unit-detail kpi-item-eight-detail">
+                                                    74,750
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kpi-table-row d-flex align-items-center">
+                                        <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between">
+                                            <div class="kpi-item-detail">
+                                                DB VI
+                                            </div>
+                                            <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                            <img src="assets/images/avatar.png">
+                                            <div class="kpi-item-two-detail">P.G.</div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-three">
+                                            <img src="assets/images/presentation.svg">
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-four">
+                                            €
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-five">
+                                            <div class="unit-detail kpi-item-five-detail">
+                                                74,750
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-six">
+                                            <div class="unit-detail kpi-item-six-detail">
+                                                -19,849
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-seven">
+                                            <div class="unit-detail kpi-item-seven-detail">
+                                                -26.55%
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-eight">
+                                            <div class="unit-detail kpi-item-eight-detail">
+                                                74,750
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kpi-table-row d-flex align-items-center">
+                                        <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between">
+                                            <div class="kpi-item-detail">
+                                                Manufacturing costs
+                                            </div>
+                                            <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                            <img src="assets/images/avatar.png">
+                                            <div class="kpi-item-two-detail">P.G.</div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-three">
+                                            <img src="assets/images/presentation.svg">
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-four">
+                                            %
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-five">
+                                            <div class="unit-detail kpi-item-five-detail">
+                                                3.22
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-six">
+                                            <div class="unit-detail kpi-item-six-detail">
+                                                13.08
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-seven">
+                                            <div class="unit-detail kpi-item-seven-detail">
+                                                9.85%
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-eight">
+                                            <div class="unit-detail kpi-item-eight-detail">
+                                                3.22
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kpi-table-row d-flex align-items-center">
+                                        <div class="kpi-table-body-item item-one d-flex align-items-center justify-content-between">
+                                            <div class="kpi-item-detail">
+                                                DB VI Marge
+                                            </div>
+                                            <a href="#" tooltip="Update Requested"><img type="button" src="assets/images/options.svg"></a>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-two d-flex align-items-center">
+                                            <img src="assets/images/avatar.png">
+                                            <div class="kpi-item-two-detail">P.G.</div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-three">
+                                            <img src="assets/images/presentation.svg">
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-four">
+                                            %
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-five">
+                                            <div class="unit-detail kpi-item-five-detail">
+                                                5
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-six">
+                                            <div class="unit-detail kpi-item-six-detail">
+                                                -1.24
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-seven">
+                                            <div class="unit-detail kpi-item-seven-detail">
+                                                -6.24%
+                                            </div>
+                                        </div>
+                                        <div class="objectives-divider"><img src="assets/images/divider.png"></div>
+                                        <div class="kpi-table-body-item item-eight">
+                                            <div class="unit-detail kpi-item-eight-detail">
+                                                5
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-footer kpis-footer" type="button">
+                            <div class="show-more">Show 5 More</div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>

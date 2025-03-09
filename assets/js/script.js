@@ -42,12 +42,17 @@ $(document).ready(function () {
         subMenu.toggleClass("more-info");
     });
 
-    $(".main-content-navbar-item").click(function (e) {
+    $(".main-content-navbar a").click(function (e) {
         e.preventDefault();
-        parentClass = $(".main-content-navbar")
-        $(parentClass).find(".active").removeClass("active");
+        $(".main-content-navbar a").removeClass("active");
         $(this).addClass("active");
+        let targetId = $(this).attr("href");
+        if (targetId.startsWith("#") && targetId.length > 1) {
+            let targetOffset = $(targetId).offset().top - 80; // Adjust for fixed navbar
+            $("html, body").animate({ scrollTop: targetOffset }, 500);
+        }
     });
+
 
     $(".objectives-type-item-wrapper").click(function (e) {
         console.log("clicked")
@@ -56,6 +61,55 @@ $(document).ready(function () {
         let subMenu = parentClass.next(".objectives-table-sub-detail");
         $(this).toggleClass("more-info");
         subMenu.toggleClass("more-info");
+    });
+
+    $("#prioritizedTaskDropdown").click(function (e) {
+        e.preventDefault();
+        let PrioritizedTaskTable = $(".prioritized-task-table");
+        if(PrioritizedTaskTable.is(":visible")) {
+            PrioritizedTaskTable.hide();
+            $(this).css("transform", "rotate(0deg)");
+        } else {
+            PrioritizedTaskTable.show();
+            $(this).css("transform", "rotate(180deg)");
+        }
+    });
+
+    $("#KPIDropdown").click(function (e) {
+        e.preventDefault();
+        let KpiTable = $(this).parent().parent().find(".kpi-item-table");
+        if(KpiTable.is(":visible")) {
+            KpiTable.hide();
+            $(this).css("transform", "rotate(0deg)");
+        } else {
+            KpiTable.show();
+            $(this).css("transform", "rotate(180deg)");
+        }
+    });
+
+    $("#KPIDropdown2").click(function (e) {
+        e.preventDefault();
+        let KpiTable = $(this).parent().parent().find(".kpi-item-table");
+        if(KpiTable.is(":visible")) {
+            KpiTable.hide();
+            $(this).css("transform", "rotate(0deg)");
+        } else {
+            KpiTable.show();
+            $(this).css("transform", "rotate(180deg)");
+        }
+    });
+
+    $("#CostPerLead").click(function (e) {
+        e.preventDefault();
+        let currentRow = $(this).parent();
+        let subRows = currentRow.next(".kpi-table-sub-rows");
+        if(subRows.is(":visible")) {
+            subRows.hide();
+            $(currentRow).toggleClass("open");
+        } else {
+            subRows.show();
+            $(currentRow).toggleClass("open");
+        }
     });
 
 });
