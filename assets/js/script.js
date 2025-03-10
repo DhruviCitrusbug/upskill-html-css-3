@@ -43,7 +43,6 @@ $(document).ready(function () {
     });
 
     $(".main-content-navbar a").click(function (e) {
-        e.preventDefault();
         $(".main-content-navbar a").removeClass("active");
         $(this).addClass("active");
         let targetId = $(this).attr("href");
