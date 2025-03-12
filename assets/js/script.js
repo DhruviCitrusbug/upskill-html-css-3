@@ -111,4 +111,17 @@ $(document).ready(function () {
         }
     });
 
+    $("#CostPerLead2").click(function (e) {
+        e.preventDefault();
+        let currentRow = $(this).parent();
+        let subRows = currentRow.next(".kpi-table-sub-rows");
+        if(subRows.is(":visible")) {
+            subRows.hide();
+            $(currentRow).toggleClass("open");
+        } else {
+            subRows.show();
+            $(currentRow).toggleClass("open");
+        }
+    });
+
 });
